@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="game-board">
+  {% for row in board %}
+    <div class="board-row">
+      {% for letter in row %}
+      <div class="board-column">{{ letter }}</div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

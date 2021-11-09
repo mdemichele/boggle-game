@@ -1,0 +1,14 @@
+.board-row {
+  display: flex;
+  width: 100%;
+  height: 15vh;
+  justify-content: center;
+}
+
+.board-column {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
