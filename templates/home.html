@@ -2,6 +2,14 @@
 
 {% block content %}
 
+<div id="game-form-container">
+  <form id="game-form">
+    <label for="guess" id="input-label">Enter A Guess</label>
+    <input name="guess" type="text" value=""/>
+    <input type="submit" value="Submit"/>
+  </form>
+</div>
+
 <div id="game-board">
   {% for row in board %}
     <div class="board-row">

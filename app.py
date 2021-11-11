@@ -22,4 +22,14 @@ board = boggle_game.make_board()
 def display_root():
     """Displays the root page with game board"""
     session["board"] = board 
-    return render_template("board.html", board=board)
+    
+    return render_template("home.html", board=board)
+    
+# Guess Route to accept a user's guesss 
+@app.route("/guess", methods=['POST'])
+def accept_guess():
+    """Accepts a guess from the user"""
+    
+    guess = request.args["guess"]
+    print(guess)
+    return "guess"
