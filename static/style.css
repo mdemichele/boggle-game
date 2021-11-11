@@ -1,3 +1,8 @@
+#game-board {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .board-row {
   display: flex;
   width: 100%;
@@ -8,6 +13,7 @@
 .board-column {
   width: 15%;
   display: flex;
+  border: 1px solid black;
   justify-content: center;
   align-items: center;
 }
