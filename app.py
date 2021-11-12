@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, session 
+from flask import Flask, request, render_template, session, jsonify
 from flask_debugtoolbar import DebugToolbarExtension
 from boggle import Boggle
 
@@ -29,7 +29,25 @@ def display_root():
 @app.route("/guess", methods=['POST'])
 def accept_guess():
     """Accepts a guess from the user"""
+    global boggle_game
     
-    guess = request.args["guess"]
-    print(guess)
-    return "guess"
+    # Create response object 
+    response = {}
+    
+    # Get current board 
+    currentBoard = session["board"]
+    
+    # Get guess 
+    guess = request.json["guess"]
+    
+    # Get a list of words from boggle_game object 
+    words = boggle_game.words 
+    
+    # Check if the guess is a valid word in dictionary AND valid on board 
+    checkResponse = boggle_game.check_valid_word(currentBoard, guess)
+    
+    response["result"] = checkResponse 
+    
+    print(response)
+    
+    return jsonify(response)
