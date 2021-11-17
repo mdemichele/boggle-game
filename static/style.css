@@ -1,3 +1,75 @@
+/* Title Style */
+#page-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Stats Section Style */
+#stats-section-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#timer-container {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+#timer-label {
+  padding-right: 10px;
+}
+
+#game-score-container {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+#game-score-label {
+  padding-right: 10px;
+}
+
+#num-games-container {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+#num-games-label {
+  padding-right: 10px;
+}
+
+#highest-score-container {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+#highest-score-label {
+  padding-right: 10px;
+}
+
+/* Guess Form styles */
+#game-form-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Game Results Style */
+#game-guess-result-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Game Board Style*/
 #game-board {
   padding-top: 50px;
   padding-bottom: 50px;
