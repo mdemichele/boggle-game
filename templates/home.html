@@ -2,6 +2,40 @@
 
 {% block content %}
 
+<!-- Start New Game -->
+<div id="start-container">
+  <form id="start-form" action="/" method="GET">
+    <input type="submit" value="Start New Game"/>
+  </form>
+</div>
+
+<!-- Stats Section: Timer & Score -->
+<div id="stats-section-container">
+  <div id="timer-container">
+    <p id="timer-label">Time Left: </p>
+    <p id="timer">60</p>
+  </div>
+
+  <!-- Score Section -->
+  <div id="game-score-container">
+    <p id="game-score-label">Total Score: </p>
+    <p id="game-score">0</p>
+  </div>
+  
+  <!-- Number of Games Played -->
+  <div id="num-games-container">
+    <p id="num-games-label">Number of Games Played: </p>
+    <p id="num-games">{{ num_games }}</p>
+  </div>
+  
+  <!-- Highest Score -->
+  <div id="highest-score-container">
+    <p id="highest-score-label">Highest Score: </p>
+    <p id="highest-score">{{ highest_score }}</p>
+  </div>
+</div>
+
+<!-- Form Section -->
 <div id="game-form-container">
   <form id="game-form">
     <label for="guess" id="input-label">Enter A Guess</label>
@@ -10,10 +44,12 @@
   </form>
 </div>
 
+<!-- Result Section -->
 <div id="game-guess-result-container">
   <p id="game-guess"></p>
 </div>
 
+<!-- Game Board -->
 <div id="game-board">
   {% for row in board %}
     <div class="board-row">
